@@ -1,0 +1,9 @@
+<h1>Reviews</h1>
+<ul class="list-group">
+  <% restaurant.reviews.each do |review| %>
+    <li class="list-group-item">
+      <%=review.rating%>/5 <br>
+      <%= review.content %>
+    </li>
+  <% end %>
+</ul>

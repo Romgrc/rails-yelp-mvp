@@ -1,0 +1,11 @@
+<ul class="list-group">
+  <% @review.each do |review| %>
+    <li class="list-group-item">
+      <%= link_to review.name, review_path(review) %> (<%= review.category %>)
+    </li>
+  <% end %>
+  <%= link_to "new review", new_review_path, class: "btn btn-primary" %>
+</ul>
+
+
+

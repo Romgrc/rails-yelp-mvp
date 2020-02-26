@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>New restaurant</h1>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <%= simple_form_for(@restaurant) do |f| %>
+            <%= f.input :name %>
+            <%= f.input :address %>
+            <%= f.input :category, as: :select, collection: %w[italian french japanese chinese belgian] %>
+
+            <%= f.submit 'new restaurant', class: 'btn btn-primary' %>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
